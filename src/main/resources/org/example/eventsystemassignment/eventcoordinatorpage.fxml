@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="628.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.eventsystemassignment.gui.EventCoordinatorPageController">
+   <children>
+      <Button layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#onCreateEvent" text="Create event" />
+      <Button layoutX="128.0" layoutY="316.0" mnemonicParsing="false" onAction="#onDeleteEvent" text="Delete event" />
+      <Button layoutX="240.0" layoutY="316.0" mnemonicParsing="false" text="Assign coordinators" />
+      <Button layoutX="388.0" layoutY="316.0" mnemonicParsing="false" onAction="#onAddTicket" text="Add ticket" />
+      <Label layoutX="16.0" layoutY="20.0" maxWidth="120.0" minWidth="-Infinity" prefHeight="57.0" prefWidth="104.0" text="Events table">
+         <padding>
+            <Insets top="40.0" />
+         </padding>
+      </Label>
+      <Text layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event coordinator page" />
+      <Line endX="576.0" layoutX="123.0" layoutY="48.0" startX="-123.0" />
+      <Button layoutX="544.0" layoutY="16.0" mnemonicParsing="false" onAction="#onGoBackToMainPage" text="Go back to main page" />
+      <Text layoutX="16.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My tickets" />
+      <TableView fx:id="tblTickets" layoutX="16.0" layoutY="398.0" prefHeight="200.0" prefWidth="401.0">
+         <columns>
+            <TableColumn fx:id="eventnameTicketsColumn" prefWidth="201.5" text="Eventname" />
+            <TableColumn fx:id="ticketColumn" prefWidth="198.5" text="Ticket" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblEvents" layoutX="16.0" layoutY="77.0" prefHeight="226.0" prefWidth="661.0">
+         <columns>
+            <TableColumn fx:id="eventnameColumn" prefWidth="88.0" text="Eventname" />
+            <TableColumn fx:id="starttimeColumn" prefWidth="61.5" text="Starttime" />
+            <TableColumn fx:id="startdateColumn" prefWidth="62.0" text="Startdate" />
+            <TableColumn fx:id="locationColumn" prefWidth="87.0" text="Location" />
+            <TableColumn fx:id="extranotesColumn" prefWidth="101.5" text="Extra notes" />
+            <TableColumn fx:id="endtimeColumn" prefWidth="57.5" text="End time" />
+            <TableColumn fx:id="enddateColumn" prefWidth="63.0" text="End date" />
+            <TableColumn fx:id="locationguidanceColumn" prefWidth="139.5" text="Location guidance" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnRefreshPage" layoutX="449.0" layoutY="16.0" mnemonicParsing="false" onAction="#onRefreshPage" text="Refresh page" />
+   </children>
+</AnchorPane>
